@@ -1,0 +1,5 @@
+const theme = {
+  typography: {
+    fontFamilty: "",
+  },
+};
