@@ -1,9 +1,20 @@
 // components
 import MuiButton from "@mui/material/Button";
 
-const Button = ({ color, isLoading = false, children, ...rest }) => {
+const Button = ({
+  color,
+  isLoading = false,
+  children,
+  fullWidth = true,
+  ...rest
+}) => {
   return (
-    <MuiButton color={color} {...rest}>
+    <MuiButton
+      color={color}
+      fullWidth={fullWidth}
+      sx={{ fontSize: 13, padding: 1.5 }}
+      {...rest}
+    >
       {children}
     </MuiButton>
   );

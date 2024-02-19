@@ -10,10 +10,7 @@ import MainFooter from "./containers/MainFooter";
 
 const MainLayout = () => {
   return (
-    <Stack
-      justifyContent={"space-between"}
-      sx={{ height: "100vh", position: "relative" }}
-    >
+    <Stack justifyContent={"space-between"} sx={{ position: "relative" }}>
       <MainMenu />
       <Outlet />
       <MainFooter />
