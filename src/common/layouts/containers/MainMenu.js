@@ -15,33 +15,53 @@ import ShoppingCartOutlinedIcon from "@mui/icons-material/ShoppingCartOutlined";
 
 const MainMenu = () => {
   return (
-    <Stack
-      direction="row"
-      justifyContent={"space-between"}
-      alignSelf={"center"}
-      width={"80%"}
-      height={92}
-      alignItems={"center"}
-      sx={{ borderBottom: `0.8px ${Colors.med_grey} solid` }}
-    >
-      <Typography variant="h6" sx={{ color: Colors.white, fontWeight: 1000 }}>
-        Street Market
-      </Typography>
+    <>
+      <Stack
+        direction="row"
+        justifyContent={"space-between"}
+        alignSelf={"center"}
+        width={"80%"}
+        height={92}
+        alignItems={"center"}
+        sx={{
+          borderBottom: `0.8px ${Colors.light_grey} solid`,
+          display: { xs: "none", md: "flex" },
+        }}
+      >
+        <Typography variant="h6" sx={{ color: Colors.white, fontWeight: 1000 }}>
+          myStreets
+        </Typography>
 
-      <Stack spacing={2} direction="row">
-        <Link label={"Home"} link={"/"} />
-        <Link label={"Headphones"} link={"/"} />
-        <Link label={"Speakers"} link={"/"} />
-        <Link label={"Earphones"} link={"/"} />
-        <Link label={"About"} link={"/"} />
+        <Stack spacing={2} direction="row">
+          <Link label={"Home"} link={"/"} />
+          <Link label={"Headphones"} link={"/"} />
+          <Link label={"Speakers"} link={"/"} />
+          <Link label={"Earphones"} link={"/"} />
+          <Link label={"About"} link={"/"} />
+        </Stack>
+
+        <IconButton>
+          <ShoppingCartOutlinedIcon
+            sx={{ color: Colors.white, height: 20, width: 23 }}
+          />
+        </IconButton>
       </Stack>
+      <Stack
+        direction="row"
+        justifyContent={"space-between"}
+        alignItems={"center"}
+        height={92}
+        width={"100%"}
+        paddingX={2}
+        sx={{ display: { xs: "flex", md: "none" } }}
+      >
+        <Typography variant="h6" sx={{ color: Colors.white, fontWeight: 1000 }}>
+          myStreets
+        </Typography>
 
-      <IconButton>
-        <ShoppingCartOutlinedIcon
-          sx={{ color: Colors.white, height: 20, width: 23 }}
-        />
-      </IconButton>
-    </Stack>
+        {/* Mobile menu here */}
+      </Stack>
+    </>
   );
 };
 export default MainMenu;
