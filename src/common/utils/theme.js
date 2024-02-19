@@ -90,6 +90,7 @@ const theme = createTheme({
       fontSize: "15px",
       lineHeight: "25px",
       color: Colors.greyDark,
+      fontFamily: "'Manrope', sans-serif",
     },
   },
 });

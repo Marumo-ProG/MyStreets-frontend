@@ -6,14 +6,17 @@ import Stack from "@mui/material/Stack";
 
 // Components
 import MainMenu from "./containers/MainMenu";
+import MainFooter from "./containers/MainFooter";
 
 const MainLayout = () => {
   return (
     <Stack
       justifyContent={"space-between"}
-      sx={{ backgroundColor: "black", height: "100vh" }}
+      sx={{ height: "100vh", position: "relative" }}
     >
       <MainMenu />
+      <Outlet />
+      <MainFooter />
     </Stack>
   );
 };

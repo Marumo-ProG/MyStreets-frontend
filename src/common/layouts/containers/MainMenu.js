@@ -13,7 +13,7 @@ import { Colors } from "../../utils/constants";
 // Icons
 import ShoppingCartOutlinedIcon from "@mui/icons-material/ShoppingCartOutlined";
 
-const MainMenu = () => {
+const MainMenu = ({ isFooter = false }) => {
   return (
     <>
       <Stack
@@ -24,8 +24,9 @@ const MainMenu = () => {
         height={92}
         alignItems={"center"}
         sx={{
-          borderBottom: `0.8px ${Colors.light_grey} solid`,
+          borderBottom: !isFooter && `0.8px ${Colors.light_grey} solid`,
           display: { xs: "none", md: "flex" },
+          position: !isFooter && "absolute",
         }}
       >
         <Typography variant="h6" sx={{ color: Colors.white, fontWeight: 1000 }}>
@@ -40,11 +41,13 @@ const MainMenu = () => {
           <Link label={"About"} link={"/"} />
         </Stack>
 
-        <IconButton>
-          <ShoppingCartOutlinedIcon
-            sx={{ color: Colors.white, height: 20, width: 23 }}
-          />
-        </IconButton>
+        {!isFooter && (
+          <IconButton>
+            <ShoppingCartOutlinedIcon
+              sx={{ color: Colors.white, height: 20, width: 23 }}
+            />
+          </IconButton>
+        )}
       </Stack>
       <Stack
         direction="row"

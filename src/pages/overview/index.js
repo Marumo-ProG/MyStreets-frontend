@@ -3,7 +3,7 @@ import Stack from "@mui/material/Stack";
 
 const Overview = () => {
   return (
-    <Stack>
+    <Stack paddingTop={"92px"}>
       <h1>Hello from Overview</h1>
     </Stack>
   );
