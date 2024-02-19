@@ -2,7 +2,7 @@
 import TextField from "@mui/material/TextField";
 
 // utils
-import { Colors } from "../../utils/constants";
+import { Colors } from "../utils/constants";
 
 const Input = ({ error, label = "", value = "", ...rest }) => {
   return (
