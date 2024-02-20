@@ -19,6 +19,7 @@ const MainFooter = () => {
     <Stack
       height={365}
       spacing={3}
+      marginTop={"180px"}
       width={"100%"}
       alignItems={"center"}
       justifyContent={"center"}
