@@ -7,10 +7,12 @@ const theme = createTheme({
     primary: {
       main: Colors.dark_brown,
       light: Colors.peach,
-      dark: Colors.dark_brown,
+      dark: Colors.peach,
     },
     secondary: {
-      main: Colors.peach,
+      main: Colors.black,
+      light: Colors.white,
+      dark: Colors.white,
     },
   },
   typography: {

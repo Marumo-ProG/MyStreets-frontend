@@ -4,16 +4,18 @@ import Stack from "@mui/material/Stack";
 // Components
 import Banner from "./containers/Banner";
 import OverviewProductList from "./containers/OverviewProductList";
+import SecondaryBanner from "./containers/SecondaryBanner";
 
 // Utils
 import { Colors } from "../../common/utils/constants";
 
 // images
 import Banner1 from "../../images/banner1.png";
+import secondaryProduct from "../../images/secondBanner.png";
 
 const Overview = () => {
   return (
-    <Stack spacing={10}>
+    <Stack spacing={5}>
       <Banner
         title={"New Product"}
         backgroundColor={Colors.light_black}
@@ -26,6 +28,16 @@ const Overview = () => {
       />
 
       <OverviewProductList />
+
+      <SecondaryBanner
+        backgroundColor={Colors.peach}
+        title={"ZX9 SPEAKER"}
+        image={secondaryProduct}
+        description={
+          "Upgrade to premium speakers that are phenomenally built to deliver truly remarkable sound."
+        }
+        link={"#"}
+      />
     </Stack>
   );
 };

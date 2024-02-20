@@ -12,7 +12,7 @@ const Button = ({
     <MuiButton
       color={color}
       fullWidth={fullWidth}
-      sx={{ fontSize: 13, padding: 1.5 }}
+      sx={{ fontSize: 13, padding: 1.5, borderRadius: 0, width: 160 }}
       {...rest}
     >
       {children}
