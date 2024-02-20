@@ -15,8 +15,8 @@ const OverviewProductList = () => {
       width={"80%"}
       height={284}
       direction={"row"}
-      paddingY={5}
       spacing={2}
+      marginTop={"180px"}
       alignSelf={"center"}
     >
       <OverviewItem title="Headphones" link="#" image={product1} />

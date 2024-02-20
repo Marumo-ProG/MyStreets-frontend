@@ -6,6 +6,7 @@ import Banner from "./containers/Banner";
 import OverviewProductList from "./containers/OverviewProductList";
 import SecondaryBanner from "./containers/SecondaryBanner";
 import MiniBanner from "./containers/MiniBanner";
+import TestimonialBanner from "./containers/TestimonialBanner";
 
 // Utils
 import { Colors } from "../../common/utils/constants";
@@ -14,6 +15,7 @@ import { Colors } from "../../common/utils/constants";
 import Banner1 from "../../images/banner1.png";
 import secondaryProduct from "../../images/secondBanner.png";
 import ThirdBanner from "../../images/third banner.png";
+import TestimonialImage from "../../images/productTestimony.png";
 
 const Overview = () => {
   return (
@@ -44,6 +46,14 @@ const Overview = () => {
         backgroundImage={ThirdBanner}
         title={"ZX7 SPEAKER"}
         link="#"
+      />
+
+      <TestimonialBanner
+        image={TestimonialImage}
+        title={"Bringing you the best audio gear"}
+        description={
+          "Located at the heart of New York City, Audiophile is the premier store for high end headphones, earphones, speakers, and audio accessories. We have a large showroom and luxury demonstration rooms available for you to browse and experience a wide range of our products. Stop by our store to meet some of the fantastic people who make Audiophile the best place to buy your portable audio equipment."
+        }
       />
     </Stack>
   );
