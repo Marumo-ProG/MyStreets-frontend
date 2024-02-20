@@ -5,6 +5,7 @@ import Stack from "@mui/material/Stack";
 import Banner from "./containers/Banner";
 import OverviewProductList from "./containers/OverviewProductList";
 import SecondaryBanner from "./containers/SecondaryBanner";
+import MiniBanner from "./containers/MiniBanner";
 
 // Utils
 import { Colors } from "../../common/utils/constants";
@@ -12,6 +13,7 @@ import { Colors } from "../../common/utils/constants";
 // images
 import Banner1 from "../../images/banner1.png";
 import secondaryProduct from "../../images/secondBanner.png";
+import ThirdBanner from "../../images/third banner.png";
 
 const Overview = () => {
   return (
@@ -37,6 +39,11 @@ const Overview = () => {
           "Upgrade to premium speakers that are phenomenally built to deliver truly remarkable sound."
         }
         link={"#"}
+      />
+      <MiniBanner
+        backgroundImage={ThirdBanner}
+        title={"ZX7 SPEAKER"}
+        link="#"
       />
     </Stack>
   );

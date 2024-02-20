@@ -27,7 +27,7 @@ const SecondaryBanner = ({
       alignSelf={"center"}
       direction="row"
       spacing={3}
-      sx={{ backgroundColor: backgroundColor }}
+      sx={{ backgroundColor: backgroundColor, borderRadius: "8px" }}
     >
       <Stack
         width={"100%"}
@@ -60,7 +60,6 @@ const SecondaryBanner = ({
             onClick={() => navigate(link)}
             variant="outlined"
             color="secondary"
-            sx={{ width: "160px", fontSize: 13 }}
           >
             See product
           </Button>
