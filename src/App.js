@@ -1,3 +1,9 @@
+// React
+
+// Context
+import OrderContextPrivider from "./common/context/OrderContext";
+
+// Theme
 import { ThemeProvider } from "@mui/material/styles";
 import theme from "./common/utils/theme";
 
@@ -5,15 +11,13 @@ import theme from "./common/utils/theme";
 import { BrowserRouter } from "react-router-dom";
 import Routes from "./Routes";
 
-import Typography from "@mui/material/Typography";
-import Button from "./common/components/Button";
-import Input from "./common/components/Input";
-
 function App() {
   return (
     <ThemeProvider theme={theme}>
       <BrowserRouter>
-        <Routes />
+        <OrderContextPrivider>
+          <Routes />
+        </OrderContextPrivider>
       </BrowserRouter>
     </ThemeProvider>
   );
