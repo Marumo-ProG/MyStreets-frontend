@@ -29,8 +29,11 @@ const Overview = () => {
         link="#"
         image={Banner1}
       />
-      <Stack width={"80%"} alignSelf={"center"}>
-        <OverviewProductList />
+      <Stack width={"80%"} alignSelf={"center"} spacing={5}>
+
+        <Stack mt={"180px"} width={"auto"} alignSelf={"center"}>
+          <OverviewProductList />
+        </Stack>
 
         <SecondaryBanner
           backgroundColor={Colors.peach}
