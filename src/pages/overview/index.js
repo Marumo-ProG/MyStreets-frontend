@@ -1,5 +1,10 @@
+import { useState, useEffect } from "react";
+
 // MUI
 import Stack from "@mui/material/Stack";
+import Skeleton from "@mui/material/Skeleton";
+
+import axios from "axios";
 
 // Components
 import Banner from "./containers/Banner";
@@ -17,17 +22,28 @@ import secondaryProduct from "../../images/secondBanner.png";
 import ThirdBanner from "../../images/third banner.png";
 
 const Overview = () => {
+
+  const [bannerProduct, setBannerProduct] = useState({})
+
+  useEffect(() => {
+    axios.get("http://localhost:3033/api/products/65d5c98e5c67a0b4f7426e0b")
+      .then((res) => {
+        console.log(res.data)
+        setBannerProduct(res.data)
+      })
+      .catch((err) => {
+        console.log(err)
+      })
+  }, [])
   return (
     <Stack spacing={5}>
       <Banner
         title={"New Product"}
         backgroundColor={Colors.light_black}
-        subtitle={"XX99 Mark II Headphones"}
-        description={
-          "Experience natural, lifelike audio and exceptional build quality made for the passionate music enthusiast."
-        }
+        subtitle={bannerProduct.title}
+        description={bannerProduct.description}
         link="/products/65d5c98e5c67a0b4f7426e0b"
-        image={Banner1}
+        image={bannerProduct.image}
       />
       <Stack width={"80%"} alignSelf={"center"} spacing={5}>
 

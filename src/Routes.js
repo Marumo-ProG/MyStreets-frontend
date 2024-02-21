@@ -10,7 +10,7 @@ import Loader from "./common/components/Loader";
 // pages
 import MainLayout from "./common/layouts/MainLayout";
 import Overview from "./pages/overview";
-import Headphones from "./pages/headphones";
+import Products from "./pages/products";
 import Product from "./pages/product";
 
 const MainRoutes = () => {
@@ -32,7 +32,7 @@ const MainRoutes = () => {
           element={
             <Suspense fallback={<Loader />}>
               {/* <RequireAuth> */}
-              <Headphones />
+              <Products />
               {/* </RequireAuth> */}
             </Suspense>
           }

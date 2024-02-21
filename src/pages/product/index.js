@@ -52,6 +52,7 @@ const Product = () => {
         Back
       </Typography>
       <ProductBannerControl
+        id={Product.id}
         title={product.title}
         image={product.image}
         description={product.description}

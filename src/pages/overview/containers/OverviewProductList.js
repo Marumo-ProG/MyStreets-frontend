@@ -5,9 +5,9 @@ import Stack from "@mui/material/Stack";
 import OverviewItem from "../componens/OverviewItem";
 
 // images
-import product1 from "../../../images/product1.png";
+import product1 from "../../../images/sneaker.png";
 import product2 from "../../../images/product2.png";
-import product3 from "../../../images/product3.png";
+import product3 from "../../../images/Watch.png";
 
 const OverviewProductList = () => {
   return (
@@ -19,9 +19,9 @@ const OverviewProductList = () => {
       marginTop={"180px"}
       alignSelf={"center"}
     >
-      <OverviewItem title="Headphones" link="#" image={product1} />
-      <OverviewItem title="Speakers" link="#" image={product2} />
-      <OverviewItem title="Earphones" link="#" image={product3} />
+      <OverviewItem title="Shoes" link="/products" image={product1} />
+      <OverviewItem title="Speakers" link="/products" image={product2} />
+      <OverviewItem title="Accessories" link="/products" image={product3} />
     </Stack>
   );
 };

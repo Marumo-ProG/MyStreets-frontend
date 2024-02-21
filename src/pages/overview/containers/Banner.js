@@ -25,6 +25,7 @@ const Banner = ({
     <Stack
       width={"100%"}
       height="calc(100vh - 93px)"
+      maxHeight={"calc(100vh - 93px)"}
       sx={{ backgroundColor: backgroundColor }}
     >
       <Stack
@@ -52,12 +53,12 @@ const Banner = ({
             </Button>
           </Stack>
         </Stack>
-        <Stack width={"100%"} spacing={3}>
+        <Stack width={"100%"} spacing={3} overflow={"hidden"}>
           <CardMedia
             component="img"
             src={image}
             alt={"mystreet product"}
-            sx={{ height: "100%", width: "100%", objectFit: "contain" }}
+            sx={{ height: "calc(100vh - 93px)", width: "100%", objectFit: "contain" }}
           />
         </Stack>
       </Stack>
