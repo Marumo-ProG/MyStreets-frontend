@@ -10,7 +10,7 @@ import TestimonialBanner from "../overview/containers/TestimonialBanner";
 // Images
 import headphoneImage from "../../images/product1.png";
 
-const Headphones = () => {
+const Products = () => {
   return (
     <Stack width={"100%"} spacing={5}>
       <PageTitleMiniBanner title={"Headphones"} />
@@ -55,4 +55,4 @@ const Headphones = () => {
   );
 };
 
-export default Headphones;
+export default Products;

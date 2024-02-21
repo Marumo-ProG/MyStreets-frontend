@@ -5,7 +5,7 @@ import CardMedia from "@mui/material/CardMedia";
 const Gallaries = ({ images }) => {
   return (
     <Stack width={"100%"} height={592} direction={"row"} spacing={2}>
-      {images.length === 3 && (
+      {images?.length === 3 && (
         <>
           <Stack width={"100%"} spacing={2}>
             <CardMedia
@@ -46,7 +46,7 @@ const Gallaries = ({ images }) => {
           </Stack>
         </>
       )}
-      {images.length === 2 && (
+      {images?.length === 2 && (
         <>
           <Stack width={"100%"} spacing={2}>
             <CardMedia
@@ -76,7 +76,7 @@ const Gallaries = ({ images }) => {
           </Stack>
         </>
       )}
-      {images.length === 1 && (
+      {images?.length === 1 && (
         <Stack width={"200%"} spacing={2}>
           <CardMedia
             component={"img"}

@@ -26,7 +26,7 @@ const Overview = () => {
         description={
           "Experience natural, lifelike audio and exceptional build quality made for the passionate music enthusiast."
         }
-        link="#"
+        link="/products/65d5c98e5c67a0b4f7426e0b"
         image={Banner1}
       />
       <Stack width={"80%"} alignSelf={"center"} spacing={5}>

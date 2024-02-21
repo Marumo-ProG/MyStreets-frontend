@@ -16,7 +16,7 @@ const Features = ({ features, extras }) => {
         <Typography variant="h3">Extras</Typography>
 
         <Stack spacing={2}>
-          {extras.map((extra, index) => {
+          {extras?.map((extra, index) => {
             return <Typography variant={"body"}>{extra}</Typography>;
           })}
         </Stack>

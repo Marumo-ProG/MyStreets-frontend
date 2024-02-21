@@ -1,5 +1,11 @@
+// React
+import { useEffect, useState } from "react"
+
 // Routing
 import { useParams } from "react-router-dom";
+
+// data fetching 
+import axios from "axios";
 
 // MUI
 import Stack from "@mui/material/Stack";
@@ -22,8 +28,20 @@ import productsImage1 from "../../images/product2.png";
 
 const Product = () => {
   const { productId } = useParams();
+  const [product, setProduct] = useState({})
+
+  useEffect(() => {
+    axios.get("http://localhost:3033/api/products/" + productId)
+      .then((res) => {
+        console.log(res.data)
+        setProduct(res.data)
+      })
+      .catch((err) => {
+        console.log(err)
+      })
+  }, [])
   return (
-    <Stack width={"80%"} alignSelf={"center"} spacing={5}>
+    <Stack width={"80%"} alignSelf={"center"} spacing={5} paddingTop={"24px"}>
       <Typography
         component={"a"}
         href="#"
@@ -34,23 +52,19 @@ const Product = () => {
         Back
       </Typography>
       <ProductBannerControl
-        title="Lenny's phones"
-        image={headphoneImage}
-        description={
-          "Come check this awesome thing out, you will get your mind blown ksnakfnaskdnasd"
-        }
+        title={product.title}
+        image={product.image}
+        description={product.description}
         isNew={true}
-        price={1200}
+        price={product.price}
       />
 
       <Features
-        features={
-          "Featuring a genuine leather head strap and premium earcups, these headphones deliver superior comfort for those who like to enjoy endless listening. It includes intuitive controls designed for any situation. Whether you’re taking a business call or just in your own personal space, the auto on/off and pause features ensure that you’ll never miss a beat."
-        }
-        extras={["2 bags", "40 day warantee"]}
+        features={product.feature}
+        extras={product.extras}
       />
 
-      <Gallaries images={[headphoneImage, productsImage1]} />
+      <Gallaries images={product.images} />
 
       <YouMayLike
         products={[
