@@ -29,8 +29,8 @@ const MainMenu = ({ isFooter = false }) => {
         sx={{
           borderBottom: !isFooter && `0.8px ${Colors.light_grey} solid`,
           display: { xs: "none", md: "flex" },
-          position: !isFooter && "absolute",
           backgroundColor: Colors.black,
+          marginBottom: "24px",
         }}
       >
         <Typography variant="h6" sx={{ color: Colors.white, fontWeight: 1000 }}>
