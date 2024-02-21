@@ -23,7 +23,7 @@ const MainFooter = () => {
       width={"100%"}
       alignItems={"center"}
       justifyContent={"center"}
-      sx={{ backgroundColor: Colors.light_black }}
+      sx={{ backgroundColor: Colors.black }}
     >
       <MainMenu isFooter />
       <Stack width={"80%"} direction={"row"}>

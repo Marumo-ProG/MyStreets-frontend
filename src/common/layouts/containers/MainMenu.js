@@ -20,13 +20,17 @@ const MainMenu = ({ isFooter = false }) => {
         direction="row"
         justifyContent={"space-between"}
         alignSelf={"center"}
-        width={"80%"}
+        width={!isFooter ? "100%" : "80%"}
+        paddingLeft={!isFooter && "10%"}
+        paddingRight={!isFooter && "10%"}
+        boxSizing={"border-box"}
         height={92}
         alignItems={"center"}
         sx={{
           borderBottom: !isFooter && `0.8px ${Colors.light_grey} solid`,
           display: { xs: "none", md: "flex" },
           position: !isFooter && "absolute",
+          backgroundColor: Colors.black,
         }}
       >
         <Typography variant="h6" sx={{ color: Colors.white, fontWeight: 1000 }}>
@@ -48,21 +52,6 @@ const MainMenu = ({ isFooter = false }) => {
             />
           </IconButton>
         )}
-      </Stack>
-      <Stack
-        direction="row"
-        justifyContent={"space-between"}
-        alignItems={"center"}
-        height={92}
-        width={"100%"}
-        paddingX={2}
-        sx={{ display: { xs: "flex", md: "none" } }}
-      >
-        <Typography variant="h6" sx={{ color: Colors.white, fontWeight: 1000 }}>
-          myStreets
-        </Typography>
-
-        {/* Mobile menu here */}
       </Stack>
     </>
   );

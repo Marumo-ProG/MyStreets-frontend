@@ -11,6 +11,7 @@ import Loader from "./common/components/Loader";
 import MainLayout from "./common/layouts/MainLayout";
 import Overview from "./pages/overview";
 import Headphones from "./pages/headphones";
+import Product from "./pages/product";
 
 const MainRoutes = () => {
   return (
@@ -27,11 +28,21 @@ const MainRoutes = () => {
           }
         />
         <Route
-          path="/headphones"
+          path="/products"
           element={
             <Suspense fallback={<Loader />}>
               {/* <RequireAuth> */}
               <Headphones />
+              {/* </RequireAuth> */}
+            </Suspense>
+          }
+        />
+        <Route
+          path="/products/:productId"
+          element={
+            <Suspense fallback={<Loader />}>
+              {/* <RequireAuth> */}
+              <Product />
               {/* </RequireAuth> */}
             </Suspense>
           }

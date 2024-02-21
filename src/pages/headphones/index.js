@@ -23,7 +23,7 @@ const Headphones = () => {
           "Come check this awesome thing out, you will get your mind blown ksnakfnaskdnasd"
         }
         isNew={true}
-        link="products/23"
+        link="/products/23"
       />
       <ProductBlock
         title="Lenny's phones"
