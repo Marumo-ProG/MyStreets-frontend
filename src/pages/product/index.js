@@ -9,6 +9,7 @@ import Typography from "@mui/material/Typography";
 import ProductBannerControl from "./containers/ProductBannerControl";
 import Features from "./containers/Feature";
 import Gallaries from "./containers/Gallaries";
+import YouMayLike from "./containers/YouMayLike";
 
 // Utils
 import { Colors } from "../../common/utils/constants";
@@ -48,6 +49,17 @@ const Product = () => {
       />
 
       <Gallaries images={[headphoneImage, productsImage1]} />
+
+      <YouMayLike
+        products={[
+          { title: "head Jacks", link: "/products/35", image: headphoneImage },
+          {
+            title: "Jane Phone Jacks",
+            link: "/products/70",
+            image: productsImage1,
+          },
+        ]}
+      />
     </Stack>
   );
 };
