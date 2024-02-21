@@ -18,7 +18,7 @@ import ThirdBanner from "../../images/third banner.png";
 
 const Overview = () => {
   return (
-    <Stack width={"80%"} alignSelf={"center"} spacing={5}>
+    <Stack spacing={5}>
       <Banner
         title={"New Product"}
         backgroundColor={Colors.light_black}
@@ -29,25 +29,26 @@ const Overview = () => {
         link="#"
         image={Banner1}
       />
+      <Stack width={"80%"} alignSelf={"center"}>
+        <OverviewProductList />
 
-      <OverviewProductList />
+        <SecondaryBanner
+          backgroundColor={Colors.peach}
+          title={"ZX9 SPEAKER"}
+          image={secondaryProduct}
+          description={
+            "Upgrade to premium speakers that are phenomenally built to deliver truly remarkable sound."
+          }
+          link={"#"}
+        />
+        <MiniBanner
+          backgroundImage={ThirdBanner}
+          title={"ZX7 SPEAKER"}
+          link="#"
+        />
 
-      <SecondaryBanner
-        backgroundColor={Colors.peach}
-        title={"ZX9 SPEAKER"}
-        image={secondaryProduct}
-        description={
-          "Upgrade to premium speakers that are phenomenally built to deliver truly remarkable sound."
-        }
-        link={"#"}
-      />
-      <MiniBanner
-        backgroundImage={ThirdBanner}
-        title={"ZX7 SPEAKER"}
-        link="#"
-      />
-
-      <TestimonialBanner />
+        <TestimonialBanner />
+      </Stack>
     </Stack>
   );
 };

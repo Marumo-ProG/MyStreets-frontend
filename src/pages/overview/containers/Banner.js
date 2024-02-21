@@ -24,8 +24,7 @@ const Banner = ({
   return (
     <Stack
       width={"100%"}
-      height="100vh"
-      paddingTop={"92px"}
+      height="calc(100vh - 93px)"
       sx={{ backgroundColor: backgroundColor }}
     >
       <Stack
