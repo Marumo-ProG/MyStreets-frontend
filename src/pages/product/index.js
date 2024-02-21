@@ -7,12 +7,15 @@ import Typography from "@mui/material/Typography";
 
 // Components
 import ProductBannerControl from "./containers/ProductBannerControl";
+import Features from "./containers/Feature";
+import Gallaries from "./containers/Gallaries";
 
 // Utils
 import { Colors } from "../../common/utils/constants";
 
 // Images
 import headphoneImage from "../../images/product3.png";
+import productsImage1 from "../../images/product2.png";
 
 const Product = () => {
   const { productId } = useParams();
@@ -36,6 +39,15 @@ const Product = () => {
         isNew={true}
         price={1200}
       />
+
+      <Features
+        features={
+          "Featuring a genuine leather head strap and premium earcups, these headphones deliver superior comfort for those who like to enjoy endless listening. It includes intuitive controls designed for any situation. Whether you’re taking a business call or just in your own personal space, the auto on/off and pause features ensure that you’ll never miss a beat."
+        }
+        extras={["2 bags", "40 day warantee"]}
+      />
+
+      <Gallaries images={[headphoneImage, productsImage1]} />
     </Stack>
   );
 };
