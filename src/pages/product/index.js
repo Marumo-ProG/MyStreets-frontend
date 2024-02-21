@@ -10,6 +10,8 @@ import ProductBannerControl from "./containers/ProductBannerControl";
 import Features from "./containers/Feature";
 import Gallaries from "./containers/Gallaries";
 import YouMayLike from "./containers/YouMayLike";
+import OverviewProductList from "../overview/containers/OverviewProductList";
+import TestimonialBanner from "../overview/containers/TestimonialBanner";
 
 // Utils
 import { Colors } from "../../common/utils/constants";
@@ -60,6 +62,11 @@ const Product = () => {
           },
         ]}
       />
+
+      <Stack mt={"180px"}>
+        <OverviewProductList />
+      </Stack>
+      <TestimonialBanner />
     </Stack>
   );
 };

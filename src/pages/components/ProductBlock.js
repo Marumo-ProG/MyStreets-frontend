@@ -20,7 +20,7 @@ const ProductBlock = ({
 }) => {
   const navigate = useNavigate();
   return (
-    <Stack height={560} width={"80%"} alignSelf={"center"} direction={"row"}>
+    <Stack height={560} width={"100%"} direction={"row"}>
       <Stack width={"100%"} height={"100%"} justifyContent={"center"}>
         {isInverted ? (
           <Stack

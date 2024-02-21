@@ -12,7 +12,7 @@ import product3 from "../../../images/product3.png";
 const OverviewProductList = () => {
   return (
     <Stack
-      width={"80%"}
+      width={"100%"}
       height={284}
       direction={"row"}
       spacing={2}

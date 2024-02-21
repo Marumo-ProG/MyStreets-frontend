@@ -6,13 +6,14 @@ import CardMedia from "@mui/material/CardMedia";
 
 // Utils
 import { Colors } from "../../../common/utils/constants";
+import TestimonyImage from "../../../images/productTestimony.png";
 
-const TestimonialBanner = ({ image, title, description }) => {
+const TestimonialBanner = () => {
   return (
     <Stack
       direction={"row"}
       spacing={2}
-      width={"80%"}
+      width={"100%"}
       height={588}
       mb={5}
       alignSelf={"center"}
@@ -21,11 +22,24 @@ const TestimonialBanner = ({ image, title, description }) => {
       <Stack
         justifyContent={"center"}
         width={"100%"}
-        spacing={2}
+        spacing={4}
         height={"100%"}
       >
-        <Typography variant={"h2"}>{title}</Typography>
-        <Typography variant={"body"}>{description}</Typography>
+        <Typography variant={"h2"}>
+          Bringing you the{" "}
+          <Box component={"span"} sx={{ color: Colors.peach }}>
+            best
+          </Box>{" "}
+          audio gear
+        </Typography>
+        <Typography variant={"body"}>
+          Located at the heart of New York City, Audiophile is the premier store
+          for high end headphones, earphones, speakers, and audio accessories.
+          We have a large showroom and luxury demonstration rooms available for
+          you to browse and experience a wide range of our products. Stop by our
+          store to meet some of the fantastic people who make Audiophile the
+          best place to buy your portable audio equipment.
+        </Typography>
       </Stack>
       <Stack
         width={"100%"}
@@ -34,7 +48,7 @@ const TestimonialBanner = ({ image, title, description }) => {
       >
         <CardMedia
           component="img"
-          src={image}
+          src={TestimonyImage}
           sx={{
             height: "100%",
             width: "100%",

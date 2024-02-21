@@ -15,11 +15,10 @@ import { Colors } from "../../common/utils/constants";
 import Banner1 from "../../images/banner1.png";
 import secondaryProduct from "../../images/secondBanner.png";
 import ThirdBanner from "../../images/third banner.png";
-import TestimonialImage from "../../images/productTestimony.png";
 
 const Overview = () => {
   return (
-    <Stack spacing={5}>
+    <Stack width={"80%"} alignSelf={"center"} spacing={5}>
       <Banner
         title={"New Product"}
         backgroundColor={Colors.light_black}
@@ -48,13 +47,7 @@ const Overview = () => {
         link="#"
       />
 
-      <TestimonialBanner
-        image={TestimonialImage}
-        title={"Bringing you the best audio gear"}
-        description={
-          "Located at the heart of New York City, Audiophile is the premier store for high end headphones, earphones, speakers, and audio accessories. We have a large showroom and luxury demonstration rooms available for you to browse and experience a wide range of our products. Stop by our store to meet some of the fantastic people who make Audiophile the best place to buy your portable audio equipment."
-        }
-      />
+      <TestimonialBanner />
     </Stack>
   );
 };

@@ -8,15 +8,12 @@ import { Colors } from "../../common/utils/constants";
 const PageTitleMiniBanner = ({ title }) => {
   return (
     <Stack
-      height={336}
+      height={"calc(336px - 93px)"}
       sx={{ backgroundColor: Colors.black }}
       justifyContent={"center"}
       alignItems={"center"}
     >
-      <Typography
-        variant="h2"
-        sx={{ color: Colors.white, marginTop: "93px", fontSize: 40 }}
-      >
+      <Typography variant="h2" sx={{ color: Colors.white, fontSize: 40 }}>
         {title}
       </Typography>
     </Stack>

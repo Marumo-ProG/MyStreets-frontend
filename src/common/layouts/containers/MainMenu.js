@@ -27,10 +27,8 @@ const MainMenu = ({ isFooter = false }) => {
         height={92}
         alignItems={"center"}
         sx={{
-          borderBottom: !isFooter && `0.8px ${Colors.light_grey} solid`,
           display: { xs: "none", md: "flex" },
           backgroundColor: Colors.black,
-          marginBottom: "24px",
         }}
       >
         <Typography variant="h6" sx={{ color: Colors.white, fontWeight: 1000 }}>
@@ -53,6 +51,9 @@ const MainMenu = ({ isFooter = false }) => {
           </IconButton>
         )}
       </Stack>
+      {/* <Stack width={"80%"} alignSelf={"center"} overflow={"hidden"}>
+        <Divider variant="fullWidth" flexItem />
+      </Stack> */}
     </>
   );
 };
